@@ -6,10 +6,6 @@ switch ($proceso) {
     case 1:
         generar_ventana($_POST['cod']);
         break;
-    case 2;
-        
-        break;
-
     default:
         break;
 }
