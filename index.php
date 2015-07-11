@@ -56,7 +56,7 @@
 
                 var cod = document.getElementById('cod').value;
 
-                var parametros = "proceso=2&cod=" + cod;
+                var parametros = "proceso=1&cod=" + cod;
 
                 console.log(parametros);
 
@@ -72,7 +72,7 @@
                 {// code for IE6, IE5
                     xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
                 }
-                xmlhttp.open("POST", "procesos_ips.php", true);
+                xmlhttp.open("POST", "datos_ips.php", true);
                 xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                 xmlhttp.setRequestHeader("Content-length", parametros.length);
                 xmlhttp.setRequestHeader("Connection", "close");
