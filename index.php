@@ -38,7 +38,6 @@
                             </div>
                         </form>
                     </div>
-                    <object type="text/html" data="https://www.paraguayconcursa.gov.py" height="650" width="450"></object>
                     <div class="col-lg-offset-3 col-lg-5 col-md-offset-3 col-md-3 col-sm-offset-3 col-sm-3 col-xs-12" style="padding-top: 1%;" id="resultado"></div>
                 </div>
             </div>

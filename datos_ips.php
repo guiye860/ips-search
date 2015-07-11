@@ -31,7 +31,7 @@ and open the template in the editor.
 
             $codigo = base64_encode($cedula);
 
-            $url = "http://servicios.ips.gov.py/nomina/datos.php?cod=$codigo";
+            $url = "//servicios.ips.gov.py/nomina/datos.php?cod=$codigo";
             ?>
             <object type="text/html" data="<?php echo $url; ?>" width="450" height="650"></object>
             <?php
