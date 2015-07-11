@@ -56,7 +56,7 @@
 
                 var cod = document.getElementById('cod').value;
 
-                var parametros = "proceso=1&cod=" + cod;
+                var parametros = "proceso=2&cod=" + cod;
 
                 console.log(parametros);
 
