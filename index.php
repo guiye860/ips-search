@@ -8,11 +8,11 @@
         <style>
             body {
                 padding-top: 50px;
-                padding-bottom: 10px;
+                //padding-bottom: 10px;
             }
         </style>
         <!-- Bootstrap -->
-        <link href="css/bootstrap-3.1.1/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <!-- Bootstrap -->
     </head>
     <body>
@@ -27,29 +27,35 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-offset-4 col-md-offset-0 col-sm-offset-4 col-xs-offset-0 col-lg-3  col-md-12 col-sm-3 col-xs-12">
+                    <div class="col-lg-offset-4 col-md-offset-0 col-sm-offset-0 col-xs-offset-0 col-lg-3  col-md-12 col-sm-12 col-xs-12">
                         <form class="form-group">
-                            <div class="col-lg-offset-0 col-md-offset-3 col-sm-offset-4 col-xs-offset-0 col-lg-10 col-md-3 col-sm-3 col-xs-7" style="padding-top: 1%;">
+                            <div class="col-lg-offset-0 col-md-offset-3 col-sm-offset-2 col-xs-offset-0 col-lg-10 col-md-3 col-sm-5 col-xs-7" style="padding-top: 1%;">
                                 <input type="text" id="cod" onkeypress="return pulsar(event);" class="form-control">
                             </div>
 
-                            <div class="col-lg-offset-0 col-md-offset-0 col-sm-offset-4 col-xs-offset-0 col-lg-2 col-md-3 col-sm-2 col-xs-3" style="padding-top: 1%;">
+                            <div class="col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-xs-offset-0 col-lg-2 col-md-3 col-sm-2 col-xs-3" style="padding-top: 1%;">
                                 <button type="button" class="btn btn-default" onclick="enviar_solicitud();">Enviar</button>
                             </div>
                         </form>
                     </div>
-                    <div class="col-lg-offset-3 col-lg-5 col-md-offset-3 col-md-3 col-sm-offset-3 col-sm-3 col-xs-12" style="padding-top: 1%;" id="resultado"></div>
+                    <div class="col-lg-offset-5 col-lg-2 col-md-offset-4 col-md-3 col-sm-offset-4 col-sm-3 col-xs-offset-3 col-xs-12" style="padding-top: 1%;" id="resultado"></div>
                 </div>
             </div>
         </div>
-        <!--        <div style="height: 100%; padding-left: 30%" id="resultado"></div>-->
-        <script src="js/jquery-1.9.1.js"></script>
-        <script src="css/bootstrap-3.1.1/js/bootstrap.min.js"></script>
+        <!--scripts-->
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <!--scripts-->
         <script>
             function pulsar(e) {
                 tecla = (document.all) ? e.keyCode : e.which;
                 return (tecla != 13);
             }
+            
+            function open_window(url){
+                window.open(url,"window","width=450,height=600,scrollbars=YES,menubar=NO,location=no");
+            }
+            
 
             function enviar_solicitud()
             {
@@ -72,7 +78,7 @@
                 {// code for IE6, IE5
                     xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
                 }
-                xmlhttp.open("POST", "datos_ips.php", true);
+                xmlhttp.open("POST", "procesos_ips.php", true);
                 xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                 xmlhttp.setRequestHeader("Content-length", parametros.length);
                 xmlhttp.setRequestHeader("Connection", "close");
@@ -82,6 +88,7 @@
                     if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
                     {
                         document.getElementById("resultado").innerHTML = xmlhttp.responseText;
+                        
                     }
                 }
                 xmlhttp.send(parametros);

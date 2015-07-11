@@ -6,9 +6,6 @@ switch ($proceso) {
     case 1:
         generar_ventana($_POST['cod']);
         break;
-    case 2:
-        echo 'opcion 2';
-        break;
     default:
         break;
 }
@@ -19,7 +16,7 @@ function generar_ventana($cedula){
     
     $url = "http://servicios.ips.gov.py/nomina/datos.php?cod=$codigo";
     ?>
-<object type="text/html" data="<?php echo $url; ?>" width="450" height="650"></object>
+<a onclick="open_window('<?php echo $url; ?>');" href="#ver_resultado" class="btn btn-info">Ver Resultado</a>
     <?php
 }
 ?>
