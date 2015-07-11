@@ -30,7 +30,7 @@
                     <div class="col-lg-offset-4 col-md-offset-0 col-sm-offset-0 col-xs-offset-0 col-lg-3  col-md-12 col-sm-12 col-xs-12">
                         <form class="form-group">
                             <div class="col-lg-offset-0 col-md-offset-3 col-sm-offset-2 col-xs-offset-0 col-lg-10 col-md-3 col-sm-5 col-xs-7" style="padding-top: 1%;">
-                                <input type="text" id="cod" onkeypress="return pulsar(event);" class="form-control">
+                                <input type="text" placeholder="N&uacute;mero de Ci" id="cod" onkeypress="return pulsar(event);" class="form-control">
                             </div>
 
                             <div class="col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-xs-offset-0 col-lg-2 col-md-3 col-sm-2 col-xs-3" style="padding-top: 1%;">
@@ -52,11 +52,6 @@
                 return (tecla != 13);
             }
             
-            function open_window(url){
-                window.open(url,"window","width=450,height=600,scrollbars=YES,menubar=NO,location=no");
-            }
-            
-
             function enviar_solicitud()
             {
 

@@ -16,7 +16,7 @@ function generar_ventana($cedula){
     
     $url = "http://servicios.ips.gov.py/nomina/datos.php?cod=$codigo";
     ?>
-<a onclick="open_window('<?php echo $url; ?>');" href="#ver_resultado" class="btn btn-info">Ver Resultado</a>
+<a  href="<?php echo $url; ?>" target="_blank" class="btn btn-info">Ver Resultado</a>
     <?php
 }
 ?>
